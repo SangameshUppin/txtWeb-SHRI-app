@@ -33,7 +33,8 @@ function send($mmob,$mmsg,$index){
         return;
 
     $appKey = array("YOUR-APP-KEY-1",
-  "YOUR-APP-KEY-2","YOUR-APP-KEY-3","YOUR-APP-KEY-4","YOUR-APP-KEY-5"
+                    "YOUR-APP-KEY-2",
+                    "YOUR-APP-KEY-3"
         );
 
 
