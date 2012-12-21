@@ -29,7 +29,7 @@ else{
 }
 function send($mmob,$mmsg,$index){
 
-    if($index == 10)
+    if($index == 3)
         return;
 
     $appKey = array("YOUR-APP-KEY-1",
