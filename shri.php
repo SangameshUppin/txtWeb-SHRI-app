@@ -17,7 +17,7 @@ $msg=htmlentities($_GET['txtweb-message'],ENT_NOQUOTES,'UTF-8');
 $message = str_replace("\n", "<br/>", $msg);
 if(!isset($_GET["txtweb-hashcode"])){
     $mobile=urlencode("YOUR_MOBILE_HASHCODE");
-    $message="Your fan:<br/>".$message."<br/><br/>To reply:<br/><form action='$URL' class=\"txtweb-form\" method=\"get\"><br/>msg<input type=\"text\" name=\"txtweb-message\"><input type=\"hidden\" name=\"txtweb-hashcode\" value='$hashcode'><input type=\"submit\" value=\"submit\"></form>";
+    $message="Your app user:<br/>".$message."<br/><br/>To reply:<br/><form action='$URL' class=\"txtweb-form\" method=\"get\"><br/>msg<input type=\"text\" name=\"txtweb-message\"><input type=\"hidden\" name=\"txtweb-hashcode\" value='$hashcode'><input type=\"submit\" value=\"submit\"></form>";
     send($mobile,$message,0);
     echo "Message sent to:<br/>Sangamesh Uppin<br/><br/>Thanks for your valuable feedback, If possible i'll contact you soon!";
 }
@@ -40,7 +40,6 @@ function send($mmob,$mmsg,$index){
 
     $pubkey=urlencode("YOUR-PUB-KEY");
     $mmsg1=urlencode("<html><head><meta name='txtweb-appkey' content='$appKey[$index]'/><title>@SHRI</title></head><body>$mmsg</body></html>");
-    $encode="txtweb-message=$mmsg1&txtweb-pubkey=$pubkey&txtweb-mobile=$mmob";
     $url="http://api.txtweb.com/v1/push";
     $fields = array(
             'txtweb-message'=>$mmsg1,
