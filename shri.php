@@ -1,6 +1,6 @@
 <html>
     <head>
-        <meta name="txtweb-appkey" content="YOUR-APP-KEY"/>
+        <meta name="txtweb-appkey" content="YOUR-APPLICATION-KEY"/>
         <title></title>
     </head>
     <body>
