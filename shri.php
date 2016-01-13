@@ -27,6 +27,10 @@ else{
     send($mobile,$message,0);
     echo "Message sent to:<br/>$mobile";
 }
+
+?>
+
+<?php
 function send($mmob,$mmsg,$index){
 
     if($index == 3)
